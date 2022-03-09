@@ -5,27 +5,14 @@ const gameBoard = document.getElementById('gameBoard');
 
 const grid = new Grid(gameBoard);
 
-// --- DEV ---
-// console.log(grid.randomEmptyCell());
-// -----------
-
 grid.randomEmptyCell().tile = new Tile(gameBoard);
 grid.randomEmptyCell().tile = new Tile(gameBoard);
-
-// --- DEV ---
-// console.log(grid.cellsByRow);
-// console.log(grid.cellsByColumn);
-// -----------
 
 const setupInput = () => {
 	window.addEventListener('keydown', handleInput, {once: true});
 }
 
 async function handleInput(event) {
-	// --- DEV ---
-	// console.log(event.key);
-	// -----------
-
 	switch (event.key) {
 		case 'ArrowUp':
 			if (!canMoveUp()) { setupInput(); return; }

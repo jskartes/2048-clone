@@ -19,10 +19,6 @@ export default class Grid {
 				);
 			}
 		);
-
-		// --- DEV ---
-		// console.log(this.#cells);
-		// -----------
 	}
 
 	get cells() { return this.#cells; }
